@@ -19,12 +19,3 @@ resource "aws_subnet" "demo_subnet" {
     Name = "fp_demo_subnet"
   }
 }
-
-resource "aws_network_interface" "demo_nic" {
-  subnet_id   = "${aws_subnet.demo_subnet.id}"
-  private_ips = ["${var.nic_private_ips}"]
-
-  tags {
-    Name = "fp_primary_network_interface"
-  }
-}

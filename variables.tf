@@ -17,8 +17,3 @@ variable "subnet_availability_zone" {
   default     = "us-east-1a"
   description = "The default AZ for the subnet"
 }
-
-variable "nic_private_ips" {
-  default     = "172.16.10.100"
-  description = "The default private IP for the NIC"
-}
