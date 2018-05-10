@@ -19,3 +19,8 @@ resource "aws_subnet" "demo_subnet" {
     Name = "fp_demo_subnet"
   }
 }
+
+data "aws_lambda_function" "existing" {
+  function_name = "test-function"
+}
+
