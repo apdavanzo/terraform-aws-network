@@ -19,3 +19,12 @@ resource "aws_subnet" "demo_subnet" {
     Name = "fp_demo_subnet"
   }
 }
+
+variable "function_name" {
+  type = "string"
+}
+
+data "aws_lambda_function" "existing" {
+  function_name = "${var.function_name}"
+}
+
